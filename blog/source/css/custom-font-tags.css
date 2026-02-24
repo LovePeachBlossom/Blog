@@ -1,0 +1,58 @@
+/* 标签页 - 五颜六色字体，无背景 */
+.tag-cloud-list a {
+  background: transparent !important;
+  border: none;
+  box-shadow: none;
+}
+
+.tag-cloud-list a::before {
+  display: none;
+}
+
+.tag-cloud-list a:nth-child(6n+1) { color: #ff6b9d; }
+.tag-cloud-list a:nth-child(6n+2) { color: #ff7f50; }
+.tag-cloud-list a:nth-child(6n+3) { color: #4682b4; }
+.tag-cloud-list a:nth-child(6n+4) { color: #6bcf9f; }
+.tag-cloud-list a:nth-child(6n+5) { color: #ba55d3; }
+.tag-cloud-list a:nth-child(6n+6) { color: #daa520; }
+
+/* 暗色模式 */
+[data-theme="dark"] .tag-cloud-list a:nth-child(6n+1) { color: #ffb3c9; }
+[data-theme="dark"] .tag-cloud-list a:nth-child(6n+2) { color: #ffb380; }
+[data-theme="dark"] .tag-cloud-list a:nth-child(6n+3) { color: #87ceeb; }
+[data-theme="dark"] .tag-cloud-list a:nth-child(6n+4) { color: #98d8c8; }
+[data-theme="dark"] .tag-cloud-list a:nth-child(6n+5) { color: #dda0dd; }
+[data-theme="dark"] .tag-cloud-list a:nth-child(6n+6) { color: #f0e68c; }
+
+/* 首页背景图透明度 */
+#page-header::before {
+  opacity: 0.3;
+}
+
+[data-theme="dark"] #page-header::before {
+  opacity: 0.5;
+}
+
+/* 关闭公告抖动特效 */
+.fa-shake {
+  animation: none !important;
+}
+
+/* 放慢头像和图标旋转速度 */
+.avatar-img img:hover {
+  animation: avatar-turn-around 2s linear infinite !important;
+}
+
+@keyframes avatar-turn-around {
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg); }
+}
+
+/* 页脚柔和渐变背景 */
+#footer {
+  background: linear-gradient(to bottom, #f5e8f5 0%, #e8d8f0 50%, #dce5f5 100%) !important;
+}
+
+[data-theme="dark"] #footer {
+  background: linear-gradient(to bottom, #2d2438 0%, #2a2d45 50%, #252d3d 100%) !important;
+}
