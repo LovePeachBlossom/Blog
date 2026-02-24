@@ -1,3 +1,10 @@
+/* 字体显示策略：减少加载闪烁 */
+@font-face {
+  font-family: 'LXGW WenKai';
+  font-display: swap;
+  src: local('LXGW WenKai'), local('LXGWWenKai-Regular');
+}
+
 /* 标签页 - 五颜六色字体，无背景 */
 .tag-cloud-list a {
   background: transparent !important;

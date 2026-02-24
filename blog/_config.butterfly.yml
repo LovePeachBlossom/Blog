@@ -23,13 +23,13 @@ social:
 favicon: /img/cherry_tab.jpg
 
 avatar:
-  img: /img/avatar.jpg
+  img: /img/avatar.WebP
 
-default_top_img: /img/bg.jpg
-index_img: /img/bg.jpg
-archive_img: /img/bg.jpg
-tag_img: /img/bg.jpg
-category_img: /img/bg.jpg
+default_top_img: /img/bg.WebP
+index_img: /img/bg.WebP
+archive_img: /img/bg.WebP
+tag_img: /img/bg.WebP
+category_img: /img/bg.WebP
 footer_img: true
 
 # 全站背景渐变
@@ -94,16 +94,16 @@ share:
 # 粉色主题色
 theme_color:
   enable: true
-  main: "#FF69B4"
-  paginator: "#FF1493"
+  main: "#D81B60"
+  paginator: "#C2185B"
   button_hover: "#FFB6C1"
   text_selection: "#FFB6C1"
-  link_color: "#FF69B4"
-  meta_color: "#FFC0CB"
+  link_color: "#D81B60"
+  meta_color: "#D81B60"
   hr_color: "#FFB6C1"
-  code_foreground: "#FF1493"
+  code_foreground: "#C2185B"
   code_background: "rgba(255, 182, 193, .1)"
-  toc_color: "#FF69B4"
+  toc_color: "#D81B60"
   blockquote_padding_color: "#FFB6C1"
   blockquote_background_color: "#FFF0F5"
   scrollbar_color: "#FF69B4"
@@ -127,6 +127,11 @@ lazyload:
   native: true
   field: site
 
+# Pjax 无刷新跳转
+pjax:
+  enable: true
+  exclude:
+
 # 链接预加载
 instantpage: true
 
@@ -137,4 +142,5 @@ structured_data:
 # 注入自定义 CSS
 inject:
   head:
+    - <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     - <link rel="stylesheet" href="/css/custom-font-tags.css">
