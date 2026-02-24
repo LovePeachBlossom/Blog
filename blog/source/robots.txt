@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blog.wf0904.cn/sitemap.xml
+Sitemap: https://blog.fovoen.moe/sitemap.xml

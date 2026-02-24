@@ -2,7 +2,7 @@
 
 个人博客，记录 Java 学习笔记，基于 Hexo + Butterfly 主题搭建，部署在 Cloudflare Pages。
 
-**在线访问**：[blog.wf0904.cn](https://blog.wf0904.cn)
+**在线访问**：[blog.fovoen.moe](https://blog.fovoen.moe)
 
 ## 项目结构
 
@@ -20,11 +20,11 @@ My_Blog/
 
 ## 本地开发
 
-需要 Node.js 18+，推荐在 Linux / WSL2 环境下开发。
+需要 Node.js 20+（见 `.nvmrc`），推荐在 Linux / WSL2 环境下开发。
 
 ```bash
 # 安装依赖
-cd blog && npm install
+cd blog && npm ci
 
 # 创建主题软链接（首次）
 ln -s ../../hexo-theme-butterfly themes/butterfly
@@ -37,21 +37,23 @@ npx hexo clean && npx hexo s
 
 推送到 `main` 分支后 Cloudflare Pages 自动构建。
 
-构建命令：
-```
-cp -r hexo-theme-butterfly blog/themes/butterfly && cd blog && npm install && npx hexo clean && npx hexo generate
-```
-
-输出目录：`blog/public`
+| 配置项 | 值 |
+|--------|-----|
+| Root directory | `/` |
+| Build command | `rm -rf blog/themes/butterfly && mkdir -p blog/themes && cp -R hexo-theme-butterfly blog/themes/butterfly && npm --prefix blog ci && npm --prefix blog run clean && npm --prefix blog run build` |
+| Build output directory | `blog/public` |
+| NODE_VERSION | `20` |
 
 ## 主题特性
 
-- 粉色系二次元配色
-- 霞鹜文楷 + Fira Code 字体
+- 粉色系二次元配色（WCAG AA 对比度达标）
+- 霞鹜文楷 + Fira Code 字体（font-display: swap 优化）
 - 全站背景图 + 渐变背景（亮/暗色适配）
 - 彩色标签（6色循环）
+- Pjax 无刷新跳转 + 链接预加载
 - 本地搜索、字数统计、图片懒加载
 - Sitemap + 结构化数据
+- Cloudflare Pages 缓存策略 + 安全响应头
 
 ## License
 

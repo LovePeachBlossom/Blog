@@ -23,13 +23,13 @@ social:
 favicon: /img/cherry_tab.jpg
 
 avatar:
-  img: /img/avatar.WebP
+  img: /img/avatar.webp
 
-default_top_img: /img/bg.WebP
-index_img: /img/bg.WebP
-archive_img: /img/bg.WebP
-tag_img: /img/bg.WebP
-category_img: /img/bg.WebP
+default_top_img: /img/bg.webp
+index_img: /img/bg.webp
+archive_img: /img/bg.webp
+tag_img: /img/bg.webp
+category_img: /img/bg.webp
 footer_img: true
 
 # 全站背景渐变
