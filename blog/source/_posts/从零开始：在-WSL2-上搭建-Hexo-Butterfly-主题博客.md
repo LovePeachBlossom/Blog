@@ -11,9 +11,9 @@ keywords: [Hexo, Butterfly, Cloudflare Pages, WSL2, 博客搭建]
 
 ## 为什么要搭博客
 
-Notion 里记了不少笔记，但总觉得缺点什么——还是想有个属于自己的小窝，把学习过程记录下来。
+Notion 里记了不少笔记，但总觉得缺点什么——还是想有个属于自己的小窝，把学习过程记录下来 (´｡• ᵕ •｡`)
 
-对比了 Hexo 和 Hugo 之后，选择了 **Hexo**：社区活跃、主题丰富、对新手友好。主题选了 **Butterfly**，卡片式设计很适合打造二次元风格的博客。部署到 Cloudflare Pages 完全免费，还自带 CDN + HTTPS，简直完美。
+对比了 Hexo 和 Hugo 之后，选择了 **Hexo**：社区活跃、主题丰富、对新手友好。主题选了 **Butterfly**，卡片式设计很适合打造二次元风格的博客。部署到 Cloudflare Pages 完全免费，还自带 CDN + HTTPS，简直完美 (*￣▽￣*)
 
 <!-- more -->
 
@@ -37,7 +37,7 @@ npm install hexo-renderer-pug hexo-renderer-stylus --save
 npx hexo clean && npx hexo s
 ```
 
-打开 `http://localhost:4000` 看到页面就成功了。
+打开 `http://localhost:4000` 看到页面就成功了 φ(≧ω≦*)♪
 
 > WSL2 小贴士：如果 localhost 打不开，试试 `hostname -I` 查看 IP，用 `http://IP:4000` 访问。
 
@@ -71,16 +71,16 @@ rm -rf blog/themes/butterfly \
 
 > 用 `npm ci` 而不是 `npm install`，保证每次构建依赖版本一致。
 
-构建成功后会得到 `xxx.pages.dev` 域名，也可以绑定自定义域名。以后每次 `git push` 就会自动部署。
+构建成功后会得到 `xxx.pages.dev` 域名，也可以绑定自定义域名。以后每次 `git push` 就会自动部署 ヽ(✿ﾟ▽ﾟ)ノ
 
-**踩过的坑**：
+**踩过的坑** (>_<)：
 - WSL2 项目一定要放在 Linux 文件系统里（`~/projects/`），别放 `/mnt/d/` 下，不然会很慢
 - 软链接在 CF 会报 `ELOOP` 错误，必须用 `cp -R` 复制
 - `moment-timezone` 需要在 `package.json` 里显式声明
 
 ## 主题定制
 
-推荐在博客根目录创建 `_config.butterfly.yml`，**只写改过的配置**，别复制整个默认文件。
+推荐在博客根目录创建 `_config.butterfly.yml`，**只写改过的配置**，别复制整个默认文件 (..•˘_˘•..)
 
 我的二次元风格配置要点：
 
@@ -92,7 +92,7 @@ rm -rf blog/themes/butterfly \
 
 ## 写在最后
 
-博客已经部署到 [blog.fovoen.moe](https://blog.fovoen.moe)，如果你也想搭博客，记住三个关键点：
+博客已经部署到 [blog.fovoen.moe](https://blog.fovoen.moe)，如果你也想搭博客，记住三个关键点 (๑•̀ㅂ•́)و✧
 
 1. WSL2 项目放 Linux 文件系统
 2. 主题配置只写差异项
