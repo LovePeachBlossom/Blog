@@ -5,7 +5,7 @@ updated: 2026-02-19 03:30:00
 tags: [博客搭建, Hexo, Butterfly, Cloudflare]
 categories: 博客日常
 cover: /img/bg.webp
-description: 从零开始用 Hexo + Butterfly 搭建粉色二次元博客，部署到 Cloudflare Pages 的完整记录
+description: 从零开始用 Hexo + Butterfly 搭建粉色二次元博客，部署到 Cloudflare Pages 的完整踩坑记录
 keywords: [Hexo, Butterfly, Cloudflare Pages, WSL2, 博客搭建]
 ---
 
@@ -23,7 +23,7 @@ keywords: [Hexo, Butterfly, Cloudflare Pages, WSL2, 博客搭建]
 
 <!-- more -->
 
-------
+---
 
 ## 环境准备
 
@@ -49,7 +49,7 @@ git config --global user.name "你的名字"
 git config --global user.email "你的邮箱"
 ```
 
-------
+---
 
 ## 本地跑起来
 
@@ -99,7 +99,7 @@ npx hexo clean && npx hexo s
 
 > ⚠️ WSL2 用户注意：localhost 打不开的话，跑 `hostname -I` 拿到 IP，用 `http://你的IP:4000` 访问。我第一次就卡这里，对着空白页发呆了十分钟 (ˉ▽ˉ；)
 
-------
+---
 
 ## 推到 Cloudflare Pages
 
@@ -141,10 +141,10 @@ blog/themes/butterfly/
 
 构建配置填这些：
 
-| 配置项   | 值                    |
-| -------- | --------------------- |
-| 框架预设 | `None`                |
-| 输出目录 | `blog/public`         |
+| 配置项 | 值 |
+|--------|-----|
+| 框架预设 | `None` |
+| 输出目录 | `blog/public` |
 | 环境变量 | `NODE_VERSION` = `20` |
 
 构建命令（核心是用 `cp -R` 替代软链接）：
@@ -159,7 +159,6 @@ rm -rf blog/themes/butterfly \
 ```
 
 逐行解释：
-
 1. 清掉可能残留的旧主题文件
 2. 确保 `themes/` 目录存在
 3. 把主题整个复制进来，替代软链接
@@ -176,7 +175,7 @@ rm -rf blog/themes/butterfly \
 - **构建偶发 OOM**：文章多了以后可能内存不够，构建命令里加 `NODE_OPTIONS=--max-old-space-size=512`
 - **首次构建卡住**：CF 免费版有并发限制，等一会儿重试就好
 
-------
+---
 
 ## 主题折腾记录
 
@@ -286,11 +285,11 @@ structured_data: true
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'
 ```
 
-------
+---
 
 ## 最后说两句
 
-博客目前部署在 [blog.fovoen.moe](https://blog.fovoen.moe/)，欢迎来玩 ♡
+博客目前部署在 [blog.fovoen.moe](https://blog.fovoen.moe)，欢迎来玩 ♡
 
 整个折腾下来，踩的坑其实不算太多，最坑的就是那个软链接问题，排查 + 修复将近两个小时。现在回头看都是小问题，但当时对着构建日志发呆真的很崩溃 (ノ_<。) 写这篇就是希望后来的人能少走一点弯路。
 
@@ -302,12 +301,11 @@ structured_data: true
 4. **用 `npm ci` 而不是 `npm install`**，锁版本保证构建稳定
 5. **图片转 WebP**，体积和加载速度都会好看很多
 
-希望能帮到同样在折腾博客的你 (๑•̀ㅂ•́)و✧ 有问题欢迎评论区留言，我看到会回的～
+希望能帮到同样在折腾博客的你 (๑•̀ㅂ•́)و✧～
 
-------
+---
 
 **参考链接：**
-
 - [Hexo 官方文档](https://hexo.io/zh-cn/docs/)
 - [Butterfly 主题文档](https://butterfly.js.org/)
 - [Cloudflare Pages 文档](https://developers.cloudflare.com/pages/)
