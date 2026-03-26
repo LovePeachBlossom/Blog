@@ -63,3 +63,8 @@
 [data-theme="dark"] #footer {
   background: linear-gradient(to bottom, #2d2438 0%, #2a2d45 50%, #252d3d 100%) !important;
 }
+
+/* 文章头部高度：让封面图展示更完整 */
+#page-header.post-bg {
+  height: 60vh;
+}
