@@ -40,6 +40,11 @@
   opacity: 0.5;
 }
 
+/* 博文页面背景图显示优化 */
+#page-header.post-bg {
+  background-position: center top;
+}
+
 /* 关闭公告抖动特效 */
 .fa-shake {
   animation: none !important;
