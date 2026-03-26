@@ -36,19 +36,17 @@
 #page-header::before { opacity: 0.3; }
 [data-theme="dark"] #page-header::before { opacity: 0.6; }
 
-/* ① 博文 Banner - 适配 1920x1080 + 视差滚动 */
+/* ① 博文 Banner - 适配 1920x1080 */
 #page-header.post-bg {
   height: 56.25vw !important;
   max-height: 100vh;
   background-position: center center;
   background-size: cover;
-  background-attachment: fixed;
 }
 
 @media (max-width: 768px) {
   #page-header.post-bg {
     max-height: 70vh;
-    background-attachment: scroll;
   }
 }
 
