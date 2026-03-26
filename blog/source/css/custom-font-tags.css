@@ -42,7 +42,14 @@
 
 /* 博文页面背景图显示优化 */
 #page-header.post-bg {
-  background-position: center top;
+  height: 650px !important;
+  background-position: center 20%;
+}
+
+@media (max-width: 768px) {
+  #page-header.post-bg {
+    height: 480px !important;
+  }
 }
 
 /* 关闭公告抖动特效 */
