@@ -135,6 +135,18 @@ pjax:
 # 链接预加载
 instantpage: true
 
+# 阅读进度条
+progressBar:
+  enable: true
+  color: "#ff8fab"
+
+# 代码块 Mac 风格
+highlight_theme: mac
+highlight_copy: true
+highlight_lang: true
+highlight_shrink: false
+code_word_wrap: false
+
 # 结构化数据（SEO）
 structured_data:
   enable: true
