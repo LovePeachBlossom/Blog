@@ -5,7 +5,7 @@ updated: 2026-03-26
 tags: [AI, Java, Spring Boot, LangChain4j, RAG, 认知中间件, 持久记忆, PAD情感模型, 自我意识, 架构设计]
 categories:
   - [项目实战, Kioku 认知中间件]
-cover: /img/bg.webp
+cover: /img/kioku01_bg.webp
 description: 把聊天记录存进数据库，不等于让 AI 角色拥有记忆。这篇文章拆解现有方案的三个根本缺陷，以及我为什么决定从认知架构层面重新设计。
 keywords: [AI持久记忆, 认知中间件, PAD情感模型, LangChain4j, RAG, 语义检索, 自我意识, Spring Boot, Chroma, 角色扮演AI]
 ---
