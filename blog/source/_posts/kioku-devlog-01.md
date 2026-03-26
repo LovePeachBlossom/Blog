@@ -1,7 +1,7 @@
 ---
 title: Kioku 开发记录 01 | 一个 AI 角色到底能「记住」什么
-date: 2026-03-26
-updated: 2026-03-26
+date: 2026-03-12
+updated: 2026-03-12
 tags: [AI, Java, Spring Boot, LangChain4j, RAG, 认知中间件, 持久记忆, PAD情感模型, 自我意识, 架构设计]
 categories:
   - [项目实战, Kioku 认知中间件]
