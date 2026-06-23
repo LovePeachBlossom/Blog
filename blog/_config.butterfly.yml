@@ -156,3 +156,5 @@ inject:
   head:
     - <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     - <link rel="stylesheet" href="/css/custom-font-tags.css">
+  bottom:
+    - <script defer src="/js/cursor-trail.js"></script>
